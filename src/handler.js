@@ -10,7 +10,8 @@ const deleteNoteByIdHandler = (request, h) => {
         notes.splice(index, 1);
         const response = h.response({
             status: 'success',
-            message: `Note ${id} deleted successfully`,
+            //message: `Note ${id} deleted successfully`,
+            message: 'Note deleted successfully',
         });
         response.code(200);
         return response;
@@ -18,7 +19,8 @@ const deleteNoteByIdHandler = (request, h) => {
 
     const response = h.response({
         status: 'fail',
-        message: `Note ${id} failed to be deleted because it was not found`,
+        //message: `Note ${id} failed to be deleted because it was not found`,
+        message: 'Note failed to be deleted because it was not found',
     });
     response.code(404);
     return response;
@@ -42,7 +44,8 @@ const editNoteByIdHandler = (request, h) => {
 
         const response = h.response({
             status: 'success',
-            message: `note ${id} successfuly updated`,
+            // message: `note ${id} successfuly updated`,
+            message: 'note successfuly updated',
         });
         response.code(200);
         return response;
@@ -50,7 +53,8 @@ const editNoteByIdHandler = (request, h) => {
 
     const response = h.response({
         status: 'fail',
-        message: `note ${id} failed to be updated, ID is not found`
+        //message: `note ${id} failed to be updated, ID is not found`
+        message: 'note failed to be updated, ID is not found'
     });
     response.code(404);
     return response;
